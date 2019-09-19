@@ -18,19 +18,10 @@ app.get("/hello", (request, response, next) => {
   })
 })
 
-// app.get("/user:id", (req, res) => {
-//   res.json(
-//     { 
-//       id: req.params.id,
-//       username: "auzan"
-//     }
-//   )
-// })
-
 // get router
 app.use("/user-json", userRoute)
 
 // setup server to listen on port :3000
-app.listen(3000, () => 
-  console.log("Express server is ready on localhost:3000")
+app.listen(PORT, () => 
+  console.log("Express server is ready")
 )

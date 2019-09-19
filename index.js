@@ -3,6 +3,8 @@ const userRoute = require('./route/user')
 const bodyParser = require('body-parser')
 const app = express() // initialize express app
 
+const PORT = process.env.PORT || 3000
+
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 

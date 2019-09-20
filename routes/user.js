@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const userData = require('../data/user')
+const userData = require('../models/user')
 
 router.get("/", (req, res) => res.send(userData))
 

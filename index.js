@@ -22,7 +22,7 @@ app.get("/", (req, res, next) => {
   res.send("Hellloooo... add '/todo' to your url to get todos api")
 })
 app.use("/todo", todoRouter)
-app.use("/userRouter", user)
+app.use("/user", userRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

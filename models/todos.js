@@ -1,19 +1,19 @@
 const todos = [
   { 
     id: 1,
-    todo: "learn express"
+    name: "learn express"
   },
   { 
     id: 2,
-    todo: "learn backend"
+    name: "learn backend"
   },
   { 
     id: 3,
-    todo: "learn node js"
+    name: "learn node js"
   },
   { 
     id: 4,
-    todo: "learn api"
+    name: "learn api"
   },
 ]
 

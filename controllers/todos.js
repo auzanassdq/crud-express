@@ -28,7 +28,7 @@ module.exports = {
       let id = todos.length + 1
       let newTodo = {
         id,
-        todo: req.body.todo
+        name: req.body.name
       }
 
       todos.push(newTodo)
@@ -66,7 +66,7 @@ module.exports = {
 
       todos.map(item => {
         if (data.id == req.params.id) {
-          todos[getTodoToUpdate].todo = req.body.todo
+          todos[getTodoToUpdate].name = req.body.name
         }
       })
       res.send({

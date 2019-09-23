@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const app = express() // initialize express app
 
 // PORT for heroku
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 
 // Import Router in this project
 const todoRouter = require('./routes/todo')
@@ -13,6 +13,12 @@ const userRouter = require("./routes/user")
 
 app.set("view engine", "pug")
 app.set("view", path.join(__dirname, "views"))
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
